@@ -1,0 +1,7 @@
+#Sat Jun 09 22:04:23 CST 2018
+connection.gradle.distribution=GRADLE_DISTRIBUTION(LOCAL_INSTALLATION(D\:\\gradle-4.6))
+override.workspace.settings=true
+gradle.user.home=D\:/gradle-4.6/gradleLib
+connection.project.dir=
+offline.mode=false
+build.scans.enabled=false
