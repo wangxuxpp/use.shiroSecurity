@@ -25,16 +25,13 @@ import use.cache.springDataShiro.memStorage.MemoryStorageFactory;
 @SuppressWarnings({"rawtypes"})
 public class SpringCatchToShiroCatchAdapter implements Cache{
 
-	private String keyPrefix = SpringRedisFactoryUtil.getConfigure().getShiroPreFix();
+	
 	private IMemoryStorage fMem = null;
 
 	public String getKeyPrefix() {
-		return keyPrefix;
+		return SpringRedisFactoryUtil.getConfigure().getShiroPreFix();
 	}
 
-	public void setKeyPrefix(String keyPrefix) {
-		this.keyPrefix = keyPrefix;
-	}
 
 	private String getCacheName(int index)
 	{
@@ -88,10 +85,10 @@ public class SpringCatchToShiroCatchAdapter implements Cache{
 		return getSpringCache().values(key);
 	}
 	public Set keys() {
-		return keys(this.keyPrefix);
+		return keys(getKeyPrefix());
 	}
 	public Collection values() {
-		return values(this.keyPrefix);
+		return values(getKeyPrefix());
 	}
 	public Object set(Object key,Object value,int expire) throws Exception
 	{

@@ -14,9 +14,11 @@ package use.shiroSecurity.cache;
  */
 public class ShiroParameter {
 
+	
 	// 0 - never expire
 	private int expire = 0;
-
+	
+	
 	public int getExpire() {
 		return expire;
 	}
